@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ケアマネジャー採用｜ルミエケアプラン（港区芝浦・居宅介護支援）</title>
+<meta name="description" content="港区芝浦の居宅介護支援事業所ルミエケアプランの採用サイトです。訪問診療クリニックと同じフロアで、主治医に直接相談できる環境です。2026年4月開設、ケアマネジャー・主任ケアマネジャーを募集しています。">
+<meta property="og:title" content="その人の物語を、つないでいく。｜ルミエケアプラン 採用サイト">
+<meta property="og:description" content="港区芝浦の居宅介護支援事業所。2026年4月開設。ケアマネジャー・主任ケアマネジャー募集中。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ルミエケアプラン 採用サイト（美加未会の採用サイトと同じ設計言語） */
+:root{
+  --paper:#F8F4F2;
+  --mist:#E7EFF4;
+  --ai:#2C475A;          /* 深い空色：見出し・濃色面 */
+  --ai-2:#45657A;
+  --ai-soft:#C6DCEA;
+  --sage:#86B3CF;
+  --sage-soft:#C6DCEA;
+  --ink:#2E3A42;
+  --muted:#67717A;
+  --line:#D9DFE4;
+  --sun:#F9DCD7;
+  --akane:#E9A3A6;       /* 桜色：物語の糸・CTA */
+  --akane-ink:#5A2630;
+  --mincho:'Shippori Mincho B1','Hiragino Mincho ProN','Yu Mincho','Noto Serif CJK JP','Noto Serif JP',serif;
+  --gothic:'Zen Kaku Gothic New','Hiragino Sans','Yu Gothic','Noto Sans CJK JP','Noto Sans JP',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--gothic);font-size:15px;line-height:1.9;
+  -webkit-font-smoothing:antialiased;word-break:auto-phrase;line-break:strict}
+a{color:inherit;text-decoration:none}
+a:focus-visible,summary:focus-visible{outline:2px solid var(--akane);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 32px}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(248,244,242,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(217,223,228,.6)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:var(--mincho);font-weight:600;font-size:16px;letter-spacing:.08em;color:var(--ai)}
+.logo small{font-family:var(--gothic);font-weight:400;font-size:11px;letter-spacing:.1em;color:var(--muted);margin-left:10px}
+.header-right{display:flex;align-items:center;gap:30px}
+nav{display:flex;gap:26px;font-size:13px;color:var(--ai-2)}
+nav a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:6px}
+.header-cta{background:var(--akane);color:var(--akane-ink);font-size:13px;font-weight:700;padding:10px 22px;border-radius:999px;white-space:nowrap;transition:background .2s}
+.header-cta:hover{background:#EFB6B8}
+
+/* buttons */
+.btn{display:inline-block;font-size:14px;font-weight:700;padding:14px 28px;border-radius:999px;transition:background .2s,color .2s}
+.btn-sun{background:var(--akane);color:var(--akane-ink)}
+.btn-sun:hover{background:#EFB6B8}
+.btn-line{border:1.5px solid var(--ai);color:var(--ai);padding:12.5px 26px}
+.btn-line:hover{background:var(--ai);color:var(--paper)}
+.actions{display:flex;gap:14px;flex-wrap:wrap}
+
+/* hero */
+.hero{min-height:calc(100vh - 68px);display:grid;grid-template-columns:1fr auto;grid-template-rows:1fr auto;column-gap:48px;padding-top:48px;padding-bottom:64px}
+.hero-art{grid-column:1;grid-row:1;align-self:center;width:100%;max-width:620px}
+.hero-art svg{width:100%;height:auto;display:block;overflow:visible}
+.hero-title{grid-column:2;grid-row:1/span 2;writing-mode:vertical-rl;font-family:var(--mincho);font-weight:600;font-size:clamp(40px,5.6vw,76px);line-height:1.4;letter-spacing:.14em;color:var(--ai);align-self:start;padding-top:8px}
+.hero-intro{grid-column:1;grid-row:2;max-width:520px}
+.hero-intro p{font-size:15px;line-height:2.1;margin-bottom:28px}
+
+/* 読み込み時のひとつの演出：糸が伸び、光が差し、題が浮かぶ */
+.light{opacity:0;animation:fadeIn 2.4s ease-out .2s forwards}
+.yarn{stroke-dasharray:900;stroke-dashoffset:900;animation:spin 3.6s cubic-bezier(.45,.1,.25,1) .5s forwards}
+.home{opacity:0;animation:fadeIn 1.2s ease-out 3.2s forwards}
+.hero-title{opacity:0;animation:fadeIn 1.6s ease-out .9s forwards}
+@keyframes fadeIn{to{opacity:1}}
+@keyframes spin{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){
+  .light,.home,.hero-title{animation:none;opacity:1}
+  .yarn{animation:none;stroke-dashoffset:0}
+  html{scroll-behavior:auto}
+}
+
+/* 共通見出し */
+.section-title{font-family:var(--mincho);font-weight:600;font-size:clamp(24px,2.6vw,32px);line-height:1.6;color:var(--ai);letter-spacing:.06em;margin-bottom:14px}
+.section-lead{color:var(--muted);font-size:14px;max-width:36em;margin-bottom:56px}
+
+/* story */
+.story{padding:120px 0 110px;background:var(--mist)}
+.story-inner{display:grid;grid-template-columns:1fr 1.25fr;gap:72px;align-items:start}
+.story h2{font-family:var(--mincho);font-weight:600;font-size:clamp(26px,3vw,36px);line-height:1.7;color:var(--ai);letter-spacing:.06em}
+.story-body p{font-family:var(--mincho);font-weight:500;font-size:17px;line-height:2.25;margin-bottom:1.6em;max-width:34em}
+.story-body p:last-child{margin-bottom:0}
+
+/* 医療連携の三つの場面 */
+.medical{padding:120px 0 110px}
+.scene-list{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+.scene{padding:30px 30px 8px 0;border-right:1px solid var(--line)}
+.scene + .scene{padding-left:30px}
+.scene:last-child{border-right:none}
+.scene .when{font-size:12px;color:var(--muted);letter-spacing:.06em}
+.scene .when b{font-family:var(--mincho);font-weight:600;color:#B25763;margin-right:10px;font-size:13px}
+.scene h3{font-family:var(--mincho);font-weight:600;font-size:19px;color:var(--ai);margin:6px 0 10px;line-height:1.6}
+.scene p{font-size:13.5px;color:var(--muted);line-height:2}
+
+/* 濃色面：立ち上げのいま */
+.team{background:var(--ai);color:var(--paper);padding:120px 0;position:relative;overflow:hidden}
+.team .section-title{color:var(--paper)}
+.team-count{display:flex;gap:64px;margin:40px 0 20px;flex-wrap:wrap}
+.team-count p{font-family:var(--mincho);color:#DDE8EF;display:flex;align-items:baseline;gap:10px}
+.team-label{font-size:17px;font-weight:500}
+.team-count b{font-size:clamp(52px,6vw,72px);font-weight:700;color:var(--sun);line-height:1}
+.team-unit{font-size:17px;font-weight:500}
+.team-sentence{font-family:var(--mincho);font-weight:500;font-size:clamp(17px,1.9vw,21px);line-height:2;margin-bottom:64px;color:#DDE8EF}
+.team-sentence span{display:inline-block}
+.values{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;border-top:1px solid rgba(221,232,239,.22);padding-top:44px}
+.values h3{font-family:var(--mincho);font-weight:600;font-size:18px;margin-bottom:10px;color:var(--paper)}
+.values p{font-size:13.5px;color:#B4C7D4;line-height:2}
+.team-thread{position:absolute;right:-30px;top:-20px;width:340px;opacity:.22;pointer-events:none}
+
+/* ある一日 */
+.day{padding:120px 0}
+.timeline{position:relative;border-left:1.5px solid var(--sage-soft);margin-left:6px}
+.moment{position:relative;display:grid;grid-template-columns:96px 1fr;gap:24px;padding:0 0 52px 34px}
+.moment:last-child{padding-bottom:0}
+.moment::before{content:'';position:absolute;left:-7px;top:10px;width:12px;height:12px;border-radius:50%;background:var(--paper);border:2px solid var(--sage)}
+.moment time{font-family:var(--mincho);font-weight:600;font-size:20px;color:var(--sage);letter-spacing:.04em;line-height:1.6}
+.moment h3{font-family:var(--mincho);font-weight:600;font-size:20px;color:var(--ai);margin-bottom:6px;line-height:1.6}
+.moment p{color:var(--muted);font-size:14px;max-width:38em}
+
+/* 募集職種 */
+.jobs{padding:120px 0 100px;background:var(--mist)}
+.job{position:relative;display:grid;grid-template-columns:auto 1fr auto;gap:40px;align-items:center;background:#fff;border-radius:28px 28px 28px 4px;padding:44px 44px 40px;transition:transform .25s ease}
+.job:hover{transform:translateY(-3px)}
+.job-name{writing-mode:vertical-rl;font-family:var(--mincho);font-weight:700;font-size:30px;letter-spacing:.14em;color:var(--ai);line-height:1.2}
+.job-copy{font-family:var(--mincho);font-weight:600;font-size:20px;line-height:1.8;margin-bottom:14px}
+.job-facts{font-size:13px;color:var(--muted);line-height:2.1}
+.job-more{font-size:13px;font-weight:700;color:var(--ai);border-bottom:1.5px solid var(--akane);padding-bottom:2px;white-space:nowrap}
+.job-note{margin-top:28px;font-size:13px;color:var(--muted)}
+
+/* よくある質問 */
+.faq{padding:120px 0 40px}
+.faq-list{border-top:1px solid var(--line);max-width:820px}
+.faq-list details{border-bottom:1px solid var(--line)}
+.faq-list summary{cursor:pointer;list-style:none;padding:24px 40px 24px 0;font-family:var(--mincho);font-weight:600;font-size:17px;color:var(--ai);position:relative}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{content:'';position:absolute;right:8px;top:50%;width:9px;height:9px;border-right:1.5px solid var(--ai);border-bottom:1.5px solid var(--ai);transform:translateY(-70%) rotate(45deg);transition:transform .2s}
+.faq-list details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+.faq-list details p{padding:0 0 26px;color:var(--muted);font-size:14px;max-width:40em}
+
+/* 事業所について */
+.place{padding:100px 0 120px}
+.place-grid{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
+.place-grid dl{display:grid;grid-template-columns:6.5em 1fr;font-size:14px}
+.place-grid dt,.place-grid dd{padding:16px 0;border-bottom:1px solid var(--line)}
+.place-grid dt{color:var(--muted)}
+.place-grid .name{padding:28px 40px 0 0}
+.place-grid .name .area{font-size:12px;color:var(--muted);letter-spacing:.06em}
+.place-grid .name h3{font-family:var(--mincho);font-weight:600;font-size:24px;color:var(--ai);margin:4px 0 10px}
+.place-grid .name p{font-size:13.5px;color:var(--muted)}
+.place-grid .name .status{display:inline-block;margin-top:12px;font-size:12px;font-weight:700;color:var(--ai-2)}
+.place-grid .name .status::before{content:'';display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--akane);margin-right:7px;vertical-align:1px}
+
+/* 締め */
+.closing{background:var(--mist);padding:130px 0 120px;text-align:center;position:relative;overflow:hidden}
+.closing h2{font-family:var(--mincho);font-weight:700;font-size:clamp(30px,4.2vw,50px);letter-spacing:.1em;color:var(--ai);line-height:1.6;margin-bottom:22px}
+.closing p{font-size:15px;max-width:36em;margin:0 auto 40px;line-height:2.1}
+.closing p span{display:inline-block}
+.closing .actions{justify-content:center}
+.closing-thread{position:absolute;left:6%;top:56px;width:180px;opacity:.6}
+
+/* footer */
+footer{padding:52px 0 40px;text-align:center}
+footer .corp{font-family:var(--mincho);font-weight:600;font-size:14px;color:var(--ai);letter-spacing:.08em}
+footer .sub{font-size:12px;color:var(--muted);margin-top:2px}
+footer .links{margin-top:12px;display:flex;gap:22px;justify-content:center;font-size:12px;color:var(--muted)}
+footer .links a:hover{color:var(--ai)}
+
+/* ---------- 職種ページ ---------- */
+.breadcrumb{font-size:12px;color:var(--muted);padding-top:28px}
+.breadcrumb a:hover{color:var(--ai)}
+.job-hero{display:grid;grid-template-columns:1fr auto;column-gap:56px;padding:40px 32px 96px}
+.job-hero-body{max-width:none}
+.job-hero-body > p,.job-hero-body > h1{max-width:600px}
+.job-hero .kind{font-size:13px;color:var(--muted);letter-spacing:.06em;margin-bottom:14px}
+.job-hero h1{font-family:var(--mincho);font-weight:600;font-size:clamp(28px,3.6vw,44px);line-height:1.6;color:var(--ai);letter-spacing:.06em;margin-bottom:24px}
+.job-hero p{font-size:15px;line-height:2.1}
+.job-hero .v-name{writing-mode:vertical-rl;font-family:var(--mincho);font-weight:700;font-size:clamp(34px,4.2vw,54px);letter-spacing:.16em;color:var(--ai);opacity:0;animation:fadeIn 1.4s ease-out .3s forwards}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);margin-top:48px;border-top:1px solid var(--line)}
+.fact{padding:22px 20px 0 0}
+.fact + .fact{padding-left:20px;border-left:1px solid var(--line)}
+.fact b{display:block;white-space:nowrap;font-family:var(--mincho);font-weight:700;font-size:26px;color:var(--ai);line-height:1.4}
+.fact b small{font-size:14px;font-weight:600;margin-left:2px}
+.fact span{font-size:12px;color:var(--muted)}
+.block{padding:110px 0}
+.block.tint{background:var(--mist)}
+.want-list{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+.want-list > div{padding:30px 30px 8px 0;border-right:1px solid var(--line)}
+.want-list > div + div{padding-left:30px}
+.want-list > div:last-child{border-right:none}
+.want-list h3{font-family:var(--mincho);font-weight:600;font-size:19px;color:var(--ai);margin-bottom:10px}
+.want-list p{font-size:13.5px;color:var(--muted);line-height:2}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:72px}
+.work-list{list-style:none;border-top:1px solid var(--line)}
+.work-list li{padding:14px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.member p{font-family:var(--mincho);font-weight:500;font-size:16px;line-height:2.2;margin-bottom:1.2em}
+.treat{border-top:1px solid var(--line)}
+.treat-row{display:grid;grid-template-columns:10em 1fr;gap:24px;padding:20px 0;border-bottom:1px solid var(--line)}
+.treat-label{font-family:var(--mincho);font-weight:600;color:var(--ai)}
+.treat-value{font-size:14.5px}
+.treat-value .big{font-family:var(--mincho);font-weight:700;font-size:22px;color:var(--ai);line-height:1.6}
+.treat-value small{display:block;color:var(--muted);font-size:13px;margin-top:4px;line-height:1.9}
+.steps{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);counter-reset:s;border-top:1px solid var(--line)}
+.steps li{counter-increment:s;padding:28px 24px 0 0;position:relative}
+.steps li + li{padding-left:24px;border-left:1px solid var(--line)}
+.steps li::before{content:counter(s);display:block;font-family:var(--mincho);font-weight:700;font-size:30px;color:var(--akane);line-height:1;margin-bottom:12px}
+.steps h3{font-family:var(--mincho);font-weight:600;font-size:18px;color:var(--ai);margin-bottom:6px}
+.steps p{font-size:13.5px;color:var(--muted);line-height:2}
+
+/* プライバシー */
+.legal{padding:72px 0 110px}
+.legal .inner{max-width:760px}
+.legal h1{font-family:var(--mincho);font-weight:600;font-size:30px;color:var(--ai);letter-spacing:.08em;margin-bottom:32px}
+.legal h2{font-family:var(--mincho);font-weight:600;font-size:18px;color:var(--ai);margin:40px 0 10px}
+.legal p,.legal li{font-size:14.5px}
+.legal p{margin-bottom:1em}
+.legal ul{padding-left:1.4em}
+
+/* responsive */
+@media (max-width:860px){
+  nav{display:none}
+  .logo small{display:none}
+  .hero{grid-template-columns:1fr auto;grid-template-rows:auto auto;column-gap:16px;padding-top:40px;min-height:auto}
+  .hero-title{grid-row:1;font-size:clamp(30px,8.5vw,44px)}
+  .hero-intro{grid-column:1/span 2;margin-top:28px}
+  .story-inner,.two{grid-template-columns:1fr;gap:32px}
+  .story,.medical,.team,.day,.jobs,.faq,.closing,.block{padding-top:84px;padding-bottom:84px}
+  .place{padding:72px 0 84px}
+  .scene-list,.want-list,.values,.place-grid,.steps{grid-template-columns:1fr}
+  .scene,.scene + .scene,.want-list > div,.want-list > div + div{padding:24px 0 16px;border-right:none;border-bottom:1px solid var(--line)}
+  .steps li,.steps li + li{padding:24px 0 16px;border-left:none;border-bottom:1px solid var(--line)}
+  .values{gap:32px}
+  .team-count{gap:40px}
+  .moment{grid-template-columns:1fr;gap:2px;padding-left:26px}
+  .job{grid-template-columns:auto 1fr;gap:24px}
+  .job-more{grid-column:2}
+  .place-grid .name{padding:24px 0 16px}
+  .closing-thread{display:none}
+  .job-hero{grid-template-columns:1fr auto;column-gap:16px;padding:32px 20px 72px}
+  .facts{grid-template-columns:1fr 1fr}
+  .fact:nth-child(3){padding-left:0;border-left:none}
+  .fact:nth-child(n+3){border-top:1px solid var(--line);margin-top:20px}
+  .treat-row{grid-template-columns:1fr;gap:4px}
+}
+@media (max-width:480px){
+  .wrap{padding:0 20px}
+  .header-cta{padding:9px 16px;font-size:12px}
+  .job{padding:30px 24px 28px}
+  .job-name{font-size:24px}
+  .job-copy{font-size:17px}
+}
+
+/* 背景の切り替え（セクションごと） */
+.bg-paper{background:var(--paper)}
+.bg-mist{background:var(--mist)}
+.faq{padding-bottom:110px}
+/* 締めを濃色に */
+.closing.dark{background:var(--ai);color:var(--paper)}
+.closing.dark h2{color:var(--paper)}
+.closing.dark p{color:#DDE8EF}
+.closing.dark .btn-line{border-color:#DDE8EF;color:#DDE8EF}
+.closing.dark .btn-line:hover{background:var(--paper);color:var(--ai)}
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-inner">
+    <a class="logo" href="index.html">ルミエケアプラン<small>採用サイト</small></a>
+    <div class="header-right">
+      <nav>
+        <a href="#medical">医療との連携</a>
+        <a href="#jobs">募集職種</a>
+        <a href="#place">事業所について</a>
+      </nav>
+      <a class="header-cta" href="#FORM_URL">見学・お問い合わせ</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section class="wrap hero">
+  <div class="hero-art" aria-hidden="true">
+    <svg viewBox="0 0 620 470" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="glow" cx="50%" cy="45%" r="50%">
+          <stop offset="0%" stop-color="#F9DCD7" stop-opacity="1"/>
+          <stop offset="60%" stop-color="#F9DCD7" stop-opacity=".45"/>
+          <stop offset="100%" stop-color="#F9DCD7" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="page" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#FFFFFF"/>
+          <stop offset="100%" stop-color="#F6EEEC"/>
+        </linearGradient>
+      </defs>
+      <g class="light">
+        <ellipse cx="330" cy="230" rx="280" ry="220" fill="url(#glow)"/>
+      </g>
+      <g class="home" fill="none" stroke="#2C475A" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M520 96 L552 68 L584 96"/>
+        <path d="M526 92 V128 H578 V92"/>
+        <rect x="544" y="104" width="14" height="14" rx="2" fill="#F9DCD7"/>
+        <path d="M498 128 H606" stroke="#86B3CF"/>
+      </g>
+      <path class="yarn" d="M352 318 C392 280 352 236 394 206 C430 180 470 214 448 236 C428 256 404 214 446 184 C486 156 512 150 534 132"
+        fill="none" stroke="#E9A3A6" stroke-width="2.6" stroke-linecap="round"/>
+      <rect x="70" y="398" width="480" height="12" rx="3" fill="#45657A"/>
+      <path d="M310 392 C270 378 222 378 178 390 L190 318 C232 304 276 304 310 316 Z" fill="url(#page)" stroke="#2C475A" stroke-width="2.2" stroke-linejoin="round"/>
+      <path d="M310 392 C350 378 398 378 442 390 L430 318 C388 304 344 304 310 316 Z" fill="url(#page)" stroke="#2C475A" stroke-width="2.2" stroke-linejoin="round"/>
+      <line x1="310" y1="316" x2="310" y2="392" stroke="#2C475A" stroke-width="2"/>
+      <g fill="none" stroke="#C6DCEA" stroke-width="2" stroke-linecap="round">
+        <path d="M206 334 C234 326 262 326 292 332"/>
+        <path d="M203 350 C232 342 262 342 292 348"/>
+        <path d="M200 366 C228 358 258 358 292 364"/>
+        <path d="M330 332 C356 326 382 326 412 334"/>
+        <path d="M330 348 C350 344 366 344 380 346"/>
+      </g>
+      <g>
+        <rect x="120" y="356" width="40" height="8" rx="3" fill="#45657A"/>
+        <rect x="126" y="364" width="28" height="26" fill="#E9A3A6"/>
+        <g stroke="#D18A90" stroke-width="1.4"><line x1="126" y1="370" x2="154" y2="370"/><line x1="126" y1="377" x2="154" y2="377"/><line x1="126" y1="384" x2="154" y2="384"/></g>
+        <rect x="120" y="390" width="40" height="8" rx="3" fill="#45657A"/>
+        <path d="M154 380 C174 384 186 390 196 388" fill="none" stroke="#E9A3A6" stroke-width="2" stroke-linecap="round"/>
+      </g>
+      <path d="M470 372 h28 v18 a7 7 0 0 1 -7 7 h-14 a7 7 0 0 1 -7 -7 Z" fill="#F8F4F2" stroke="#45657A" stroke-width="2"/>
+      <path d="M478 360 q4 -6 0 -12 M490 360 q4 -6 0 -12" fill="none" stroke="#C6DCEA" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M0 150 C60 166 100 196 140 250" fill="none" stroke="#B48A55" stroke-width="2.2" stroke-linecap="round" opacity=".8"/>
+      <g fill="#EBB4B6">
+        <ellipse cx="30" cy="148" rx="7" ry="16" transform="rotate(-50 30 148)" opacity=".75"/>
+        <ellipse cx="54" cy="178" rx="7" ry="17" transform="rotate(40 54 178)" opacity=".6"/>
+        <ellipse cx="80" cy="172" rx="6" ry="15" transform="rotate(-40 80 172)" opacity=".85"/>
+        <ellipse cx="102" cy="206" rx="7" ry="16" transform="rotate(48 102 206)" opacity=".7"/>
+        <ellipse cx="124" cy="210" rx="6" ry="15" transform="rotate(-30 124 210)" opacity=".55"/>
+      </g>
+      <g fill="#F5D6D5">
+        <ellipse cx="66" cy="152" rx="5" ry="12" transform="rotate(-10 66 152)"/>
+        <ellipse cx="114" cy="230" rx="5" ry="12" transform="rotate(70 114 230)"/>
+      </g>
+    </svg>
+  </div>
+
+  <h1 class="hero-title">その人の物語を、<br>つないでいく。</h1>
+
+  <div class="hero-intro">
+    <p>ルミエケアプランは、訪問診療クリニックと同じフロアにある居宅介護支援事業所です。2026年4月に主任ケアマネジャー2名で開設しました。この事業所を一緒に育てていくケアマネジャーを募集しています。</p>
+    <div class="actions">
+      <a class="btn btn-sun" href="#FORM_URL">見学・面談を申し込む</a>
+      <a class="btn btn-line" href="care-manager.html">募集要項を見る</a>
+    </div>
+  </div>
+</section>
+
+<section class="story">
+  <div class="wrap story-inner">
+    <h2>声の届くところに、<br>主治医がいる。</h2>
+    <div class="story-body">
+      <p>在宅で暮らす方のケアプランは、医療の状況で大きく変わります。退院の日程、薬の調整、病状の見通し。ケアマネジャーが知りたいことの多くは、主治医や看護師が知っています。</p>
+      <p>それなのに、確認の電話がつながらない。返事を待つあいだに、サービスの調整が遅れてしまう。そんな経験をお持ちの方も多いと思います。</p>
+      <p>ルミエケアプランは、訪問診療クリニックと同じフロアにあります。聞きたいことがあれば、その場で顔を合わせてたずねられます。医療と介護のあいだにある距離を、少しでも縮めたい。それがこの事業所の出発点です。</p>
+    </div>
+  </div>
+</section>
+
+<section class="medical bg-paper" id="medical">
+  <div class="wrap">
+    <h2 class="section-title">医療との連携でできること</h2>
+    <p class="section-lead">主治医・看護師・診療アシスタントと、その日のうちに話せます。</p>
+    <div class="scene-list">
+      <div class="scene">
+        <span class="when"><b>その一</b>退院が決まったとき</span>
+        <h3>帰ってからの姿を、一緒に考える</h3>
+        <p>退院後の医療の見立てを主治医に確認しながら、必要なサービスを組み立てられます。初回訪問の前に、注意すべき点を看護師と共有することもできます。</p>
+      </div>
+      <div class="scene">
+        <span class="when"><b>その二</b>状態が変わったとき</span>
+        <h3>迷ったら、すぐ相談する</h3>
+        <p>ご家族やヘルパーから「いつもと様子が違う」と連絡が来たとき。電話を折り返し待つのではなく、同じフロアの医療スタッフに直接相談できます。</p>
+      </div>
+      <div class="scene">
+        <span class="when"><b>その三</b>最期の時間が近づいたとき</span>
+        <h3>家で過ごしたい、を支える</h3>
+        <p>看取りの時期は、プランの見直しが続きます。医療チームと同じ見通しを持てるので、ご本人とご家族の希望に沿った調整がしやすくなります。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="team" id="now">
+  <svg class="team-thread" viewBox="0 0 340 300" aria-hidden="true" fill="none" stroke="#DDE8EF" stroke-width="3" stroke-linecap="round">
+    <path d="M340 30 C260 40 220 90 250 130 C276 166 320 120 288 96 C256 72 200 120 180 170 C160 220 110 250 40 290"/>
+  </svg>
+  <div class="wrap">
+    <h2 class="section-title">はじまったばかりの事業所を、一緒につくる。</h2>
+    <div class="team-count">
+      <p><span class="team-label">開設</span><b>2026</b><span class="team-unit">年4月</span></p>
+      <p><span class="team-label">主任ケアマネジャー</span><b>2</b><span class="team-unit">名</span></p>
+    </div>
+    <p class="team-sentence">
+      <span>開設から半年あまり。</span><span>まだ決まっていないことが、たくさんあります。</span>
+    </p>
+    <div class="values">
+      <div>
+        <h3>公正中立であること</h3>
+        <p>医療と近いことは、利用者の選択を狭める理由にはなりません。主治医やサービス事業所は、ご本人とご家族の希望にもとづいて選びます。</p>
+      </div>
+      <div>
+        <h3>ひとりで抱えない</h3>
+        <p>判断に迷うケースは、事業所内の主任ケアマネジャーと、同じフロアの医療スタッフに相談しながら進めます。</p>
+      </div>
+      <div>
+        <h3>仕組みを、一緒に決める</h3>
+        <p>記録や書類の様式、勉強会や事例検討の進め方、件数が増えたときの分担。決まったやり方に合わせるのではなく、これから一緒に決めていきます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="day bg-paper">
+  <div class="wrap">
+    <h2 class="section-title">ケアマネジャーの、ある一日</h2>
+    <p class="section-lead">一日の例です。訪問の件数や順番は日によって変わります。</p>
+    <div class="timeline">
+      <div class="moment"><time>8:45</time><div><h3>今日訪ねる方のことを話す</h3><p>訪問予定と、気になる利用者の情報を確認します。</p></div></div>
+      <div class="moment"><time>9:30</time><div><h3>暮らしの様子をうかがう</h3><p>モニタリング訪問で、ご自宅での様子やサービスの状況を聞き取ります。</p></div></div>
+      <div class="moment"><time>13:00</time><div><h3>顔を合わせて、主治医に相談する</h3><p>午前の訪問で気になったことを、同じフロアの医療スタッフに直接確認します。</p></div></div>
+      <div class="moment"><time>14:00</time><div><h3>みんなで、プランを話し合う</h3><p>サービス担当者会議で、ご本人・ご家族・事業所とプランの内容をすり合わせます。</p></div></div>
+      <div class="moment"><time>17:45</time><div><h3>記録を整えて、一日を終える</h3><p>支援経過の記録と事業所への連絡を済ませて退勤します。残業は月平均10時間程度です。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="jobs" id="jobs">
+  <div class="wrap">
+    <h2 class="section-title">一緒に働く仲間を募集しています</h2>
+    <p class="section-lead">まずは見学やカジュアル面談から始められます。</p>
+    <a class="job" href="care-manager.html">
+      <span class="job-name">ケアマネジャー</span>
+      <div>
+        <p class="job-copy">医療のそばで、その人の暮らしを組み立てる。</p>
+        <p class="job-facts">月給30万〜32万円（30件超はインセンティブあり）<br>土日祝休み・残業は月平均10時間程度<br>介護支援専門員の資格と、実務経験3年以上</p>
+      </div>
+      <span class="job-more">仕事内容と条件を見る</span>
+    </a>
+    <p class="job-note">主任ケアマネジャーの方も歓迎します。</p>
+  </div>
+</section>
+
+<section class="faq bg-paper">
+  <div class="wrap">
+    <h2 class="section-title">よくある質問</h2>
+    <p class="section-lead">このほかにも、見学や面談の場で気軽にお聞きください。</p>
+    <div class="faq-list">
+      <details>
+        <summary>医療の知識に自信がありません。大丈夫でしょうか。</summary>
+        <p>福祉職出身の方も歓迎します。わからないことは、同じフロアの主治医や看護師にその場で確認できます。医療的なケースを一人で抱え込まずに進められる環境です。</p>
+      </details>
+      <details>
+        <summary>担当件数はどれくらいですか。</summary>
+        <p>立ち上げ期のため、ご経験や状況に合わせて段階的に担当を増やしていきます。要介護の担当利用者が30件を超えた分には、1人あたり8,000円のインセンティブがあります。</p>
+      </details>
+      <details>
+        <summary>見学だけでも申し込めますか。</summary>
+        <p>はい、見学だけでも歓迎します。事業所の雰囲気や、医療スタッフとのやりとりを実際にご覧ください。</p>
+      </details>
+      <details>
+        <summary>在職中ですが、入職時期は相談できますか。</summary>
+        <p>ご相談いただけます。現在のお勤め先の状況に合わせて調整します。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="place bg-mist" id="place">
+  <div class="wrap">
+    <h2 class="section-title">事業所について</h2>
+    <p class="section-lead">JR田町駅から歩いて5分。訪問診療クリニックと同じフロアにあります。</p>
+    <div class="place-grid">
+      <div class="name">
+        <span class="area">港区 芝浦</span>
+        <h3>ルミエケアプラン</h3>
+        <p>居宅介護支援事業所</p>
+        <span class="status">募集中</span>
+      </div>
+      <dl>
+        <dt>所在地</dt><dd>東京都港区芝浦3-11-7 根本ビル4階</dd>
+        <dt>アクセス</dt><dd>JR山手線・京浜東北線「田町」駅 徒歩5分<br>都営浅草線「三田」駅 徒歩11分</dd>
+        <dt>開設</dt><dd>2026年4月1日</dd>
+        <dt>営業時間</dt><dd>月〜金曜日 8:45〜17:45</dd>
+        <dt>運営</dt><dd>合同会社KARUIN</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="closing dark">
+  <svg class="closing-thread" viewBox="0 0 180 70" aria-hidden="true" fill="none" stroke="#E9A3A6" stroke-width="2" stroke-linecap="round">
+    <path d="M4 50 C40 50 52 14 82 18 C108 22 100 52 80 46 C62 40 84 12 120 16 C146 19 160 32 176 26"/>
+  </svg>
+  <div class="wrap">
+    <h2>まずは、見学にお越しください。</h2>
+    <p><span>同じフロアにある医療チームとの距離感は、</span><span>実際に来ていただくのがいちばん伝わります。</span><span>見学だけでも、話を聞くだけでも歓迎です。</span><span>すぐに応募したい方も、同じフォームからどうぞ。</span></p>
+    <div class="actions">
+      <a class="btn btn-sun" href="#FORM_URL">見学・面談を申し込む</a>
+      <a class="btn btn-line" href="#FORM_URL">質問だけ送る</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="corp">ルミエケアプラン</div>
+    <div class="sub">運営：合同会社KARUIN</div>
+    <div class="links">
+      <a href="care-manager.html">募集要項</a>
+      <a href="privacy.html">プライバシーポリシー</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

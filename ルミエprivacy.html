@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>プライバシーポリシー｜ルミエケアプラン 採用サイト</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="ルミエケアプラン採用サイトのプライバシーポリシーです。">
+<meta property="og:title" content="プライバシーポリシー｜ルミエケアプラン 採用サイト">
+<meta property="og:description" content="港区芝浦の居宅介護支援事業所。2026年4月開設。ケアマネジャー・主任ケアマネジャー募集中。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ルミエケアプラン 採用サイト（美加未会の採用サイトと同じ設計言語） */
+:root{
+  --paper:#F8F4F2;
+  --mist:#E7EFF4;
+  --ai:#2C475A;          /* 深い空色：見出し・濃色面 */
+  --ai-2:#45657A;
+  --ai-soft:#C6DCEA;
+  --sage:#86B3CF;
+  --sage-soft:#C6DCEA;
+  --ink:#2E3A42;
+  --muted:#67717A;
+  --line:#D9DFE4;
+  --sun:#F9DCD7;
+  --akane:#E9A3A6;       /* 桜色：物語の糸・CTA */
+  --akane-ink:#5A2630;
+  --mincho:'Shippori Mincho B1','Hiragino Mincho ProN','Yu Mincho','Noto Serif CJK JP','Noto Serif JP',serif;
+  --gothic:'Zen Kaku Gothic New','Hiragino Sans','Yu Gothic','Noto Sans CJK JP','Noto Sans JP',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--gothic);font-size:15px;line-height:1.9;
+  -webkit-font-smoothing:antialiased;word-break:auto-phrase;line-break:strict}
+a{color:inherit;text-decoration:none}
+a:focus-visible,summary:focus-visible{outline:2px solid var(--akane);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 32px}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(248,244,242,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(217,223,228,.6)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:var(--mincho);font-weight:600;font-size:16px;letter-spacing:.08em;color:var(--ai)}
+.logo small{font-family:var(--gothic);font-weight:400;font-size:11px;letter-spacing:.1em;color:var(--muted);margin-left:10px}
+.header-right{display:flex;align-items:center;gap:30px}
+nav{display:flex;gap:26px;font-size:13px;color:var(--ai-2)}
+nav a:hover{color:var(--ai);text-decoration:underline;text-underline-offset:6px}
+.header-cta{background:var(--akane);color:var(--akane-ink);font-size:13px;font-weight:700;padding:10px 22px;border-radius:999px;white-space:nowrap;transition:background .2s}
+.header-cta:hover{background:#EFB6B8}
+
+/* buttons */
+.btn{display:inline-block;font-size:14px;font-weight:700;padding:14px 28px;border-radius:999px;transition:background .2s,color .2s}
+.btn-sun{background:var(--akane);color:var(--akane-ink)}
+.btn-sun:hover{background:#EFB6B8}
+.btn-line{border:1.5px solid var(--ai);color:var(--ai);padding:12.5px 26px}
+.btn-line:hover{background:var(--ai);color:var(--paper)}
+.actions{display:flex;gap:14px;flex-wrap:wrap}
+
+/* hero */
+.hero{min-height:calc(100vh - 68px);display:grid;grid-template-columns:1fr auto;grid-template-rows:1fr auto;column-gap:48px;padding-top:48px;padding-bottom:64px}
+.hero-art{grid-column:1;grid-row:1;align-self:center;width:100%;max-width:620px}
+.hero-art svg{width:100%;height:auto;display:block;overflow:visible}
+.hero-title{grid-column:2;grid-row:1/span 2;writing-mode:vertical-rl;font-family:var(--mincho);font-weight:600;font-size:clamp(40px,5.6vw,76px);line-height:1.4;letter-spacing:.14em;color:var(--ai);align-self:start;padding-top:8px}
+.hero-intro{grid-column:1;grid-row:2;max-width:520px}
+.hero-intro p{font-size:15px;line-height:2.1;margin-bottom:28px}
+
+/* 読み込み時のひとつの演出：糸が伸び、光が差し、題が浮かぶ */
+.light{opacity:0;animation:fadeIn 2.4s ease-out .2s forwards}
+.yarn{stroke-dasharray:900;stroke-dashoffset:900;animation:spin 3.6s cubic-bezier(.45,.1,.25,1) .5s forwards}
+.home{opacity:0;animation:fadeIn 1.2s ease-out 3.2s forwards}
+.hero-title{opacity:0;animation:fadeIn 1.6s ease-out .9s forwards}
+@keyframes fadeIn{to{opacity:1}}
+@keyframes spin{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){
+  .light,.home,.hero-title{animation:none;opacity:1}
+  .yarn{animation:none;stroke-dashoffset:0}
+  html{scroll-behavior:auto}
+}
+
+/* 共通見出し */
+.section-title{font-family:var(--mincho);font-weight:600;font-size:clamp(24px,2.6vw,32px);line-height:1.6;color:var(--ai);letter-spacing:.06em;margin-bottom:14px}
+.section-lead{color:var(--muted);font-size:14px;max-width:36em;margin-bottom:56px}
+
+/* story */
+.story{padding:120px 0 110px;background:var(--mist)}
+.story-inner{display:grid;grid-template-columns:1fr 1.25fr;gap:72px;align-items:start}
+.story h2{font-family:var(--mincho);font-weight:600;font-size:clamp(26px,3vw,36px);line-height:1.7;color:var(--ai);letter-spacing:.06em}
+.story-body p{font-family:var(--mincho);font-weight:500;font-size:17px;line-height:2.25;margin-bottom:1.6em;max-width:34em}
+.story-body p:last-child{margin-bottom:0}
+
+/* 医療連携の三つの場面 */
+.medical{padding:120px 0 110px}
+.scene-list{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+.scene{padding:30px 30px 8px 0;border-right:1px solid var(--line)}
+.scene + .scene{padding-left:30px}
+.scene:last-child{border-right:none}
+.scene .when{font-size:12px;color:var(--muted);letter-spacing:.06em}
+.scene .when b{font-family:var(--mincho);font-weight:600;color:#B25763;margin-right:10px;font-size:13px}
+.scene h3{font-family:var(--mincho);font-weight:600;font-size:19px;color:var(--ai);margin:6px 0 10px;line-height:1.6}
+.scene p{font-size:13.5px;color:var(--muted);line-height:2}
+
+/* 濃色面：立ち上げのいま */
+.team{background:var(--ai);color:var(--paper);padding:120px 0;position:relative;overflow:hidden}
+.team .section-title{color:var(--paper)}
+.team-count{display:flex;gap:64px;margin:40px 0 20px;flex-wrap:wrap}
+.team-count p{font-family:var(--mincho);color:#DDE8EF;display:flex;align-items:baseline;gap:10px}
+.team-label{font-size:17px;font-weight:500}
+.team-count b{font-size:clamp(52px,6vw,72px);font-weight:700;color:var(--sun);line-height:1}
+.team-unit{font-size:17px;font-weight:500}
+.team-sentence{font-family:var(--mincho);font-weight:500;font-size:clamp(17px,1.9vw,21px);line-height:2;margin-bottom:64px;color:#DDE8EF}
+.team-sentence span{display:inline-block}
+.values{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;border-top:1px solid rgba(221,232,239,.22);padding-top:44px}
+.values h3{font-family:var(--mincho);font-weight:600;font-size:18px;margin-bottom:10px;color:var(--paper)}
+.values p{font-size:13.5px;color:#B4C7D4;line-height:2}
+.team-thread{position:absolute;right:-30px;top:-20px;width:340px;opacity:.22;pointer-events:none}
+
+/* ある一日 */
+.day{padding:120px 0}
+.timeline{position:relative;border-left:1.5px solid var(--sage-soft);margin-left:6px}
+.moment{position:relative;display:grid;grid-template-columns:96px 1fr;gap:24px;padding:0 0 52px 34px}
+.moment:last-child{padding-bottom:0}
+.moment::before{content:'';position:absolute;left:-7px;top:10px;width:12px;height:12px;border-radius:50%;background:var(--paper);border:2px solid var(--sage)}
+.moment time{font-family:var(--mincho);font-weight:600;font-size:20px;color:var(--sage);letter-spacing:.04em;line-height:1.6}
+.moment h3{font-family:var(--mincho);font-weight:600;font-size:20px;color:var(--ai);margin-bottom:6px;line-height:1.6}
+.moment p{color:var(--muted);font-size:14px;max-width:38em}
+
+/* 募集職種 */
+.jobs{padding:120px 0 100px;background:var(--mist)}
+.job{position:relative;display:grid;grid-template-columns:auto 1fr auto;gap:40px;align-items:center;background:#fff;border-radius:28px 28px 28px 4px;padding:44px 44px 40px;transition:transform .25s ease}
+.job:hover{transform:translateY(-3px)}
+.job-name{writing-mode:vertical-rl;font-family:var(--mincho);font-weight:700;font-size:30px;letter-spacing:.14em;color:var(--ai);line-height:1.2}
+.job-copy{font-family:var(--mincho);font-weight:600;font-size:20px;line-height:1.8;margin-bottom:14px}
+.job-facts{font-size:13px;color:var(--muted);line-height:2.1}
+.job-more{font-size:13px;font-weight:700;color:var(--ai);border-bottom:1.5px solid var(--akane);padding-bottom:2px;white-space:nowrap}
+.job-note{margin-top:28px;font-size:13px;color:var(--muted)}
+
+/* よくある質問 */
+.faq{padding:120px 0 40px}
+.faq-list{border-top:1px solid var(--line);max-width:820px}
+.faq-list details{border-bottom:1px solid var(--line)}
+.faq-list summary{cursor:pointer;list-style:none;padding:24px 40px 24px 0;font-family:var(--mincho);font-weight:600;font-size:17px;color:var(--ai);position:relative}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{content:'';position:absolute;right:8px;top:50%;width:9px;height:9px;border-right:1.5px solid var(--ai);border-bottom:1.5px solid var(--ai);transform:translateY(-70%) rotate(45deg);transition:transform .2s}
+.faq-list details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+.faq-list details p{padding:0 0 26px;color:var(--muted);font-size:14px;max-width:40em}
+
+/* 事業所について */
+.place{padding:100px 0 120px}
+.place-grid{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
+.place-grid dl{display:grid;grid-template-columns:6.5em 1fr;font-size:14px}
+.place-grid dt,.place-grid dd{padding:16px 0;border-bottom:1px solid var(--line)}
+.place-grid dt{color:var(--muted)}
+.place-grid .name{padding:28px 40px 0 0}
+.place-grid .name .area{font-size:12px;color:var(--muted);letter-spacing:.06em}
+.place-grid .name h3{font-family:var(--mincho);font-weight:600;font-size:24px;color:var(--ai);margin:4px 0 10px}
+.place-grid .name p{font-size:13.5px;color:var(--muted)}
+.place-grid .name .status{display:inline-block;margin-top:12px;font-size:12px;font-weight:700;color:var(--ai-2)}
+.place-grid .name .status::before{content:'';display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--akane);margin-right:7px;vertical-align:1px}
+
+/* 締め */
+.closing{background:var(--mist);padding:130px 0 120px;text-align:center;position:relative;overflow:hidden}
+.closing h2{font-family:var(--mincho);font-weight:700;font-size:clamp(30px,4.2vw,50px);letter-spacing:.1em;color:var(--ai);line-height:1.6;margin-bottom:22px}
+.closing p{font-size:15px;max-width:36em;margin:0 auto 40px;line-height:2.1}
+.closing p span{display:inline-block}
+.closing .actions{justify-content:center}
+.closing-thread{position:absolute;left:6%;top:56px;width:180px;opacity:.6}
+
+/* footer */
+footer{padding:52px 0 40px;text-align:center}
+footer .corp{font-family:var(--mincho);font-weight:600;font-size:14px;color:var(--ai);letter-spacing:.08em}
+footer .sub{font-size:12px;color:var(--muted);margin-top:2px}
+footer .links{margin-top:12px;display:flex;gap:22px;justify-content:center;font-size:12px;color:var(--muted)}
+footer .links a:hover{color:var(--ai)}
+
+/* ---------- 職種ページ ---------- */
+.breadcrumb{font-size:12px;color:var(--muted);padding-top:28px}
+.breadcrumb a:hover{color:var(--ai)}
+.job-hero{display:grid;grid-template-columns:1fr auto;column-gap:56px;padding:40px 32px 96px}
+.job-hero-body{max-width:none}
+.job-hero-body > p,.job-hero-body > h1{max-width:600px}
+.job-hero .kind{font-size:13px;color:var(--muted);letter-spacing:.06em;margin-bottom:14px}
+.job-hero h1{font-family:var(--mincho);font-weight:600;font-size:clamp(28px,3.6vw,44px);line-height:1.6;color:var(--ai);letter-spacing:.06em;margin-bottom:24px}
+.job-hero p{font-size:15px;line-height:2.1}
+.job-hero .v-name{writing-mode:vertical-rl;font-family:var(--mincho);font-weight:700;font-size:clamp(34px,4.2vw,54px);letter-spacing:.16em;color:var(--ai);opacity:0;animation:fadeIn 1.4s ease-out .3s forwards}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);margin-top:48px;border-top:1px solid var(--line)}
+.fact{padding:22px 20px 0 0}
+.fact + .fact{padding-left:20px;border-left:1px solid var(--line)}
+.fact b{display:block;white-space:nowrap;font-family:var(--mincho);font-weight:700;font-size:26px;color:var(--ai);line-height:1.4}
+.fact b small{font-size:14px;font-weight:600;margin-left:2px}
+.fact span{font-size:12px;color:var(--muted)}
+.block{padding:110px 0}
+.block.tint{background:var(--mist)}
+.want-list{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+.want-list > div{padding:30px 30px 8px 0;border-right:1px solid var(--line)}
+.want-list > div + div{padding-left:30px}
+.want-list > div:last-child{border-right:none}
+.want-list h3{font-family:var(--mincho);font-weight:600;font-size:19px;color:var(--ai);margin-bottom:10px}
+.want-list p{font-size:13.5px;color:var(--muted);line-height:2}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:72px}
+.work-list{list-style:none;border-top:1px solid var(--line)}
+.work-list li{padding:14px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+.member p{font-family:var(--mincho);font-weight:500;font-size:16px;line-height:2.2;margin-bottom:1.2em}
+.treat{border-top:1px solid var(--line)}
+.treat-row{display:grid;grid-template-columns:10em 1fr;gap:24px;padding:20px 0;border-bottom:1px solid var(--line)}
+.treat-label{font-family:var(--mincho);font-weight:600;color:var(--ai)}
+.treat-value{font-size:14.5px}
+.treat-value .big{font-family:var(--mincho);font-weight:700;font-size:22px;color:var(--ai);line-height:1.6}
+.treat-value small{display:block;color:var(--muted);font-size:13px;margin-top:4px;line-height:1.9}
+.steps{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);counter-reset:s;border-top:1px solid var(--line)}
+.steps li{counter-increment:s;padding:28px 24px 0 0;position:relative}
+.steps li + li{padding-left:24px;border-left:1px solid var(--line)}
+.steps li::before{content:counter(s);display:block;font-family:var(--mincho);font-weight:700;font-size:30px;color:var(--akane);line-height:1;margin-bottom:12px}
+.steps h3{font-family:var(--mincho);font-weight:600;font-size:18px;color:var(--ai);margin-bottom:6px}
+.steps p{font-size:13.5px;color:var(--muted);line-height:2}
+
+/* プライバシー */
+.legal{padding:72px 0 110px}
+.legal .inner{max-width:760px}
+.legal h1{font-family:var(--mincho);font-weight:600;font-size:30px;color:var(--ai);letter-spacing:.08em;margin-bottom:32px}
+.legal h2{font-family:var(--mincho);font-weight:600;font-size:18px;color:var(--ai);margin:40px 0 10px}
+.legal p,.legal li{font-size:14.5px}
+.legal p{margin-bottom:1em}
+.legal ul{padding-left:1.4em}
+
+/* responsive */
+@media (max-width:860px){
+  nav{display:none}
+  .logo small{display:none}
+  .hero{grid-template-columns:1fr auto;grid-template-rows:auto auto;column-gap:16px;padding-top:40px;min-height:auto}
+  .hero-title{grid-row:1;font-size:clamp(30px,8.5vw,44px)}
+  .hero-intro{grid-column:1/span 2;margin-top:28px}
+  .story-inner,.two{grid-template-columns:1fr;gap:32px}
+  .story,.medical,.team,.day,.jobs,.faq,.closing,.block{padding-top:84px;padding-bottom:84px}
+  .place{padding:72px 0 84px}
+  .scene-list,.want-list,.values,.place-grid,.steps{grid-template-columns:1fr}
+  .scene,.scene + .scene,.want-list > div,.want-list > div + div{padding:24px 0 16px;border-right:none;border-bottom:1px solid var(--line)}
+  .steps li,.steps li + li{padding:24px 0 16px;border-left:none;border-bottom:1px solid var(--line)}
+  .values{gap:32px}
+  .team-count{gap:40px}
+  .moment{grid-template-columns:1fr;gap:2px;padding-left:26px}
+  .job{grid-template-columns:auto 1fr;gap:24px}
+  .job-more{grid-column:2}
+  .place-grid .name{padding:24px 0 16px}
+  .closing-thread{display:none}
+  .job-hero{grid-template-columns:1fr auto;column-gap:16px;padding:32px 20px 72px}
+  .facts{grid-template-columns:1fr 1fr}
+  .fact:nth-child(3){padding-left:0;border-left:none}
+  .fact:nth-child(n+3){border-top:1px solid var(--line);margin-top:20px}
+  .treat-row{grid-template-columns:1fr;gap:4px}
+}
+@media (max-width:480px){
+  .wrap{padding:0 20px}
+  .header-cta{padding:9px 16px;font-size:12px}
+  .job{padding:30px 24px 28px}
+  .job-name{font-size:24px}
+  .job-copy{font-size:17px}
+}
+
+/* 背景の切り替え（セクションごと） */
+.bg-paper{background:var(--paper)}
+.bg-mist{background:var(--mist)}
+.faq{padding-bottom:110px}
+/* 締めを濃色に */
+.closing.dark{background:var(--ai);color:var(--paper)}
+.closing.dark h2{color:var(--paper)}
+.closing.dark p{color:#DDE8EF}
+.closing.dark .btn-line{border-color:#DDE8EF;color:#DDE8EF}
+.closing.dark .btn-line:hover{background:var(--paper);color:var(--ai)}
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-inner">
+    <a class="logo" href="index.html">ルミエケアプラン<small>採用サイト</small></a>
+    <div class="header-right">
+      <nav>
+        <a href="index.html#medical">医療との連携</a>
+        <a href="index.html#jobs">募集職種</a>
+        <a href="index.html#place">事業所について</a>
+      </nav>
+      <a class="header-cta" href="#FORM_URL">見学・お問い合わせ</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section class="legal">
+  <div class="wrap"><div class="inner">
+    <h1>プライバシーポリシー</h1>
+    <p>合同会社KARUIN（以下「当社」）は、ルミエケアプランの採用活動において取得する個人情報を、以下の方針にもとづいて取り扱います。</p>
+    <h2>1. 取得する情報</h2>
+    <p>応募・見学のお申し込みフォームを通じて、氏名、連絡先（電話番号・メールアドレス）、職歴、保有資格、その他ご記入いただいた内容を取得します。</p>
+    <h2>2. 利用の目的</h2>
+    <p>取得した情報は、次の目的にのみ利用します。</p>
+    <ul><li>見学・面談・面接の日程調整とご連絡</li><li>採用選考と、その結果のご連絡</li><li>採用後の入職手続き</li></ul>
+    <h2>3. 第三者への提供</h2>
+    <p>法令にもとづく場合を除き、ご本人の同意なく第三者に提供することはありません。</p>
+    <h2>4. 管理と保管</h2>
+    <p>取得した情報は、漏えい・紛失・改ざんを防ぐために適切に管理します。不採用となった方の情報は、選考終了後、一定期間を経て削除します。</p>
+    <h2>5. 開示・訂正・削除のご請求</h2>
+    <p>ご本人から、ご自身の情報の開示・訂正・削除のご請求があった場合は、本人確認のうえ速やかに対応します。</p>
+    <h2>6. お問い合わせ窓口</h2>
+    <p>合同会社KARUIN　ルミエケアプラン 採用担当<br>東京都港区芝浦3-11-7 根本ビル4階<br>メール：（準備中）</p>
+    <p style="font-size:13px;color:var(--muted);margin-top:28px">制定日：2026年●月●日</p>
+  </div></div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="corp">ルミエケアプラン</div>
+    <div class="sub">運営：合同会社KARUIN</div>
+    <div class="links">
+      <a href="care-manager.html">募集要項</a>
+      <a href="privacy.html">プライバシーポリシー</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
